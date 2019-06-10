@@ -1,11 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Birdboard</title>
-</head>
+@extends('layouts.app')
+
+@section('content')
 <body>
-    <h1>{{ $project->title }}</h1>
-    <div>{{ $project->description }}</div>
+<h1>{{ $project->title }}</h1>
+<div>{{ $project->description }}</div>
+<a href="{{ route('projects-index') }}">Go back</a>
 </body>
-</html>
+@endsection

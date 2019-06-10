@@ -14,10 +14,10 @@
 Route::get('/', 'Controller@index');
 
 Route::group(['middleware' => 'auth'], function (){
-    Route::get('/projects', 'ProjectsController@index');
-    Route::get('/projects/create', 'ProjectsController@create');
+    Route::get('/projects', 'ProjectsController@index')->name('projects-index');
+    Route::get('/projects/create', 'ProjectsController@create')->name('projects-create');
     Route::get('/projects/{project}', 'ProjectsController@show');
-    Route::post('/projects', 'ProjectsController@store')->name('store-project');
+    Route::post('/projects', 'ProjectsController@store')->name('projects-store');
 });
 
 Auth::routes();
