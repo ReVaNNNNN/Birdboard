@@ -244,7 +244,7 @@
 }
 
 .bg-blue {
-  background-color: #3490dc;
+  background-color: #47cdff;
 }
 
 .bg-blue-light {
@@ -536,7 +536,7 @@
 }
 
 .hover\:bg-blue:hover {
-  background-color: #3490dc;
+  background-color: #47cdff;
 }
 
 .hover\:bg-blue-light:hover {
@@ -828,7 +828,7 @@
 }
 
 .focus\:bg-blue:focus {
-  background-color: #3490dc;
+  background-color: #47cdff;
 }
 
 .focus\:bg-blue-light:focus {
@@ -1192,7 +1192,7 @@
 }
 
 .border-blue {
-  border-color: #3490dc;
+  border-color: #47cdff;
 }
 
 .border-blue-light {
@@ -1484,7 +1484,7 @@
 }
 
 .hover\:border-blue:hover {
-  border-color: #3490dc;
+  border-color: #47cdff;
 }
 
 .hover\:border-blue-light:hover {
@@ -1776,7 +1776,7 @@
 }
 
 .focus\:border-blue:focus {
-  border-color: #3490dc;
+  border-color: #47cdff;
 }
 
 .focus\:border-blue-light:focus {
@@ -4531,7 +4531,7 @@
 }
 
 .text-blue {
-  color: #3490dc;
+  color: #47cdff;
 }
 
 .text-blue-light {
@@ -4823,7 +4823,7 @@
 }
 
 .hover\:text-blue:hover {
-  color: #3490dc;
+  color: #47cdff;
 }
 
 .hover\:text-blue-light:hover {
@@ -5115,7 +5115,7 @@
 }
 
 .focus\:text-blue:focus {
-  color: #3490dc;
+  color: #47cdff;
 }
 
 .focus\:text-blue-light:focus {
@@ -5841,7 +5841,7 @@
   }
 
   .sm\:bg-blue {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .sm\:bg-blue-light {
@@ -6133,7 +6133,7 @@
   }
 
   .sm\:hover\:bg-blue:hover {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .sm\:hover\:bg-blue-light:hover {
@@ -6425,7 +6425,7 @@
   }
 
   .sm\:focus\:bg-blue:focus {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .sm\:focus\:bg-blue-light:focus {
@@ -6781,7 +6781,7 @@
   }
 
   .sm\:border-blue {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .sm\:border-blue-light {
@@ -7073,7 +7073,7 @@
   }
 
   .sm\:hover\:border-blue:hover {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .sm\:hover\:border-blue-light:hover {
@@ -7365,7 +7365,7 @@
   }
 
   .sm\:focus\:border-blue:focus {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .sm\:focus\:border-blue-light:focus {
@@ -10104,7 +10104,7 @@
   }
 
   .sm\:text-blue {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .sm\:text-blue-light {
@@ -10396,7 +10396,7 @@
   }
 
   .sm\:hover\:text-blue:hover {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .sm\:hover\:text-blue-light:hover {
@@ -10688,7 +10688,7 @@
   }
 
   .sm\:focus\:text-blue:focus {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .sm\:focus\:text-blue-light:focus {
@@ -11415,7 +11415,7 @@
   }
 
   .md\:bg-blue {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .md\:bg-blue-light {
@@ -11707,7 +11707,7 @@
   }
 
   .md\:hover\:bg-blue:hover {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .md\:hover\:bg-blue-light:hover {
@@ -11999,7 +11999,7 @@
   }
 
   .md\:focus\:bg-blue:focus {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .md\:focus\:bg-blue-light:focus {
@@ -12355,7 +12355,7 @@
   }
 
   .md\:border-blue {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .md\:border-blue-light {
@@ -12647,7 +12647,7 @@
   }
 
   .md\:hover\:border-blue:hover {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .md\:hover\:border-blue-light:hover {
@@ -12939,7 +12939,7 @@
   }
 
   .md\:focus\:border-blue:focus {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .md\:focus\:border-blue-light:focus {
@@ -15678,7 +15678,7 @@
   }
 
   .md\:text-blue {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .md\:text-blue-light {
@@ -15970,7 +15970,7 @@
   }
 
   .md\:hover\:text-blue:hover {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .md\:hover\:text-blue-light:hover {
@@ -16262,7 +16262,7 @@
   }
 
   .md\:focus\:text-blue:focus {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .md\:focus\:text-blue-light:focus {
@@ -16989,7 +16989,7 @@
   }
 
   .lg\:bg-blue {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .lg\:bg-blue-light {
@@ -17281,7 +17281,7 @@
   }
 
   .lg\:hover\:bg-blue:hover {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .lg\:hover\:bg-blue-light:hover {
@@ -17573,7 +17573,7 @@
   }
 
   .lg\:focus\:bg-blue:focus {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .lg\:focus\:bg-blue-light:focus {
@@ -17929,7 +17929,7 @@
   }
 
   .lg\:border-blue {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .lg\:border-blue-light {
@@ -18221,7 +18221,7 @@
   }
 
   .lg\:hover\:border-blue:hover {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .lg\:hover\:border-blue-light:hover {
@@ -18513,7 +18513,7 @@
   }
 
   .lg\:focus\:border-blue:focus {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .lg\:focus\:border-blue-light:focus {
@@ -21252,7 +21252,7 @@
   }
 
   .lg\:text-blue {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .lg\:text-blue-light {
@@ -21544,7 +21544,7 @@
   }
 
   .lg\:hover\:text-blue:hover {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .lg\:hover\:text-blue-light:hover {
@@ -21836,7 +21836,7 @@
   }
 
   .lg\:focus\:text-blue:focus {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .lg\:focus\:text-blue-light:focus {
@@ -22563,7 +22563,7 @@
   }
 
   .xl\:bg-blue {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .xl\:bg-blue-light {
@@ -22855,7 +22855,7 @@
   }
 
   .xl\:hover\:bg-blue:hover {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .xl\:hover\:bg-blue-light:hover {
@@ -23147,7 +23147,7 @@
   }
 
   .xl\:focus\:bg-blue:focus {
-    background-color: #3490dc;
+    background-color: #47cdff;
   }
 
   .xl\:focus\:bg-blue-light:focus {
@@ -23503,7 +23503,7 @@
   }
 
   .xl\:border-blue {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .xl\:border-blue-light {
@@ -23795,7 +23795,7 @@
   }
 
   .xl\:hover\:border-blue:hover {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .xl\:hover\:border-blue-light:hover {
@@ -24087,7 +24087,7 @@
   }
 
   .xl\:focus\:border-blue:focus {
-    border-color: #3490dc;
+    border-color: #47cdff;
   }
 
   .xl\:focus\:border-blue-light:focus {
@@ -26826,7 +26826,7 @@
   }
 
   .xl\:text-blue {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .xl\:text-blue-light {
@@ -27118,7 +27118,7 @@
   }
 
   .xl\:hover\:text-blue:hover {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .xl\:hover\:text-blue-light:hover {
@@ -27410,7 +27410,7 @@
   }
 
   .xl\:focus\:text-blue:focus {
-    color: #3490dc;
+    color: #47cdff;
   }
 
   .xl\:focus\:text-blue-light:focus {
