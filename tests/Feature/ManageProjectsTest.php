@@ -24,7 +24,7 @@ class ManageProjectsTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $this->actingAs(factory('App\User')->create());
+        $this->sigIn();
 
         $this->get('/projects/create')->assertStatus(200);
 
@@ -65,7 +65,7 @@ class ManageProjectsTest extends TestCase
 
     public function test_project_requires_a_title()
     {
-        $this->actingAs(factory('App\User')->create());
+        $this->sigIn();
 
         $attributes = factory('App\Project')->raw(['title' => '']);
 
@@ -74,7 +74,7 @@ class ManageProjectsTest extends TestCase
 
     public function test_project_requires_a_description()
     {
-        $this->actingAs(factory('App\User')->create());
+        $this->sigIn();
 
         $attributes = factory('App\Project')->raw(['description' => '']);
 
