@@ -1,43 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <body>
-        <form method="POST" action="{{ route('projects-update', $project->id) }}">
-            @csrf
-            @method('PATCH')
+    <div class="lg:w1/2 lg:mx-auto bg-white p-6 md:py-12 md:px-16 rounded shadow">
+        <h1 class="text-2xl font-normal mb-10 text-center">
+            Edit your project
+        </h1>
 
-            <h1 class="heading is-1">Edit Your  Project</h1>
-
-            <div class="field">
-                <label for="title" class="label">Title</label>
-
-                <div class="control">
-                    <input
-                            type="text"
-                            class="input"
-                            name="title"
-                            placeholder="Title"
-                            value=" {{ $project->title }}"
-                    >
-                </div>
-            </div>
-
-            <div class="field">
-                <label for="description" class="label">Description</label>
-
-                <div class="control">
-                    <textarea class="textarea" name="description">
-                        {{ $project->description }}
-                    </textarea>
-                </div>
-            </div>
-
-            <div class="field">
-                <div class="control">
-                    <button type="submit" class="button is-link">Update project</button>
-                    <a href="{{ route('projects-show', $project->id) }}">Cancel</a>
-                </div>
-            </div>
+        <form
+                method="POST"
+                action="{{ route('projects-update') }}"
+        >
+            @include('projects.form', ['project' => new App\Project()])
         </form>
-    </body>
+    </div>
 @endsection
