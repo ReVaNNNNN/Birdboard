@@ -64,6 +64,14 @@ class ManageProjectsTest extends TestCase
         $this->assertDatabaseHas('projects', $attributes);
     }
 
+    public function test_user_can_update_a_projects_general_notes()
+    {
+        $project = ProjectFactory::create();
+
+        $this->get($project->path() . '/edit')
+            ->assertRedirect('login');
+    }
+
     public function test_user_can_view_their_a_project()
     {
         $project = ProjectFactory::create();

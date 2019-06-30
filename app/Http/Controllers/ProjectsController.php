@@ -73,9 +73,9 @@ class ProjectsController extends Controller
     public function validateRequest()
     {
         $attributes = request()->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'notes' => 'min:3'
+            'title' => 'sometimes|required',
+            'description' => 'sometimes|required',
+            'notes' => 'nullable'
         ]);
         return $attributes;
     }
