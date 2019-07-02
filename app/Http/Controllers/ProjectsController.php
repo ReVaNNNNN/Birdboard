@@ -57,14 +57,11 @@ class ProjectsController extends Controller
 
     /**
      * @param UpdateProjectRequest $request
-     * @param Project $project
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(UpdateProjectRequest $request, Project $project)
+    public function update(UpdateProjectRequest $request)
     {
-        $project->update($request->validated());
-
-        return redirect($project->path());
+        return redirect($request->save()->path());
     }
 
     /**
