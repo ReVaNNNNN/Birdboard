@@ -6,6 +6,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+        \App\Project::created(function ($project) {
+            \App\Activity::create([
+                'project_id' => $project->id,
+                'description' => 'created'
+            ]);
+        });
+
+        \App\Project::updated(function ($project) {
+            \App\Activity::create([
+                'project_id' => $project->id,
+                'description' => 'updated'
+            ]);
+        });
+    }
+
     protected $guarded = [];
 
     public function path()

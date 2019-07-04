@@ -1,12 +1,5 @@
 <?php
 
-//temporary Event Listener:
-\App\Project::created(function ($project) {
-    \App\Activity::create([
-        'project_id' => $project->id
-    ]);
-});
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
