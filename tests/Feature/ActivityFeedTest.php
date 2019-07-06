@@ -10,7 +10,7 @@ class ActivityFeedTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_creating_a_project_generates_activity()
+    public function test_creating_a_project_records_activity()
     {
         $project = ProjectFactory::create(); // 5:30
 
@@ -18,7 +18,7 @@ class ActivityFeedTest extends TestCase
         $this->assertEquals('created', $project->activity[0]->description);
     }
 
-    public function test_updating_a_project_generates_activity()
+    public function test_updating_a_project_records_activity()
     {
         $project = ProjectFactory::create(); // 5:30
 
