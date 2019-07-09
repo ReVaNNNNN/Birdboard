@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Routing\Redirector;
 use App\Project;
 use App\Task;
 
@@ -9,10 +10,10 @@ class ProjectTasksController extends Controller
 {
     /**
      * @param Project $project
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return Redirector
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function store(Project $project)
+    public function store(Project $project) : Redirector
     {
         $this->authorize('update', $project);
 
@@ -26,10 +27,10 @@ class ProjectTasksController extends Controller
     /**
      * @param Project $project
      * @param Task $task
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return Redirector
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function update(Project $project, Task $task)
+    public function update(Project $project, Task $task) : Redirector
     {
         $this->authorize('update', $task->project);
 
