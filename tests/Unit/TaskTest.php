@@ -28,4 +28,15 @@ class TaskTest extends TestCase
             $task->path()
         );
     }
+
+    public function test_it_can_be_completed()
+    {
+        $task = factory(Task::class)->create();
+
+        $this->assertFalse($task->completed);
+
+        $task->complete();
+
+        $this->assertTrue($task->fresh()->completed);
+    }
 }
