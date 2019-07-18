@@ -19,7 +19,7 @@ class Task extends Model
         parent::boot();
 
         static::created(function ($task) {
-            $task->project->recordActivity('create_task');
+            $task->project->recordActivity('created_task');
         });
     }
 
