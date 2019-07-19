@@ -45,7 +45,7 @@ class RecordActivityTest extends TestCase
         $project = ProjectFactory::withTasks(1)->create();
 
         $this->actingAs($project->owner)
-            ->patch($project->task[0]->patch(), [
+            ->patch($project->tasks[0]->path(), [
                 'body' => 'awesome body',
                 'completed' => true
             ]);
@@ -56,10 +56,10 @@ class RecordActivityTest extends TestCase
 
     public function test_incompleting_a_task()
     {
-        $project = ProjectFactory::withTasks(1)->create(); // 2:00
+        $project = ProjectFactory::withTasks(1)->create();
 
         $this->actingAs($project->owner)
-            ->patch($project->task[0]->patch(), [
+            ->patch($project->tasks[0]->path(), [
                 'body' => 'awesome body',
                 'completed' => true
             ]);
@@ -67,10 +67,12 @@ class RecordActivityTest extends TestCase
         $this->assertCount(3, $project->activity);
 
         $this->actingAs($project->owner)
-            ->patch($project->task[0]->patch(), [
+            ->patch($project->tasks[0]->path(), [
                 'body' => 'awesome body',
                 'completed' => false
             ]);
+
+        $project->refresh();
 
         $this->assertCount(4, $project->activity);
         $this->assertEquals('incomplete_task', $project->activity->last()->description);
