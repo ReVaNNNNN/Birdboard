@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UpdateProjectRequest;
-use Illuminate\Http\Request;
 use App\Project;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Routing\Redirector;
+use Illuminate\View\View;
 
 class ProjectsController extends Controller
 {
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return View
      */
-    public function index()
+    public function index() : View
     {
         $projects = auth()->user()->projects;
 
@@ -21,10 +23,10 @@ class ProjectsController extends Controller
 
     /**
      * @param Project $project
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @return View
+     * @throws AuthorizationException
      */
-    public function show(Project $project)
+    public function show(Project $project) : View
     {
         $this->authorize('update', $project);
 
@@ -32,7 +34,7 @@ class ProjectsController extends Controller
     }
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return View
      */
     public function create()
     {
@@ -40,16 +42,16 @@ class ProjectsController extends Controller
     }
 
     /**
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return Redirector
      */
-    public function store()
+    public function store() : Redirector
     {
         $project = auth()->user()->projects()->create($this->validateRequest());
 
         return redirect($project->path());
     }
 
-    public function edit(Project $project)
+    public function edit(Project $project) : View
     {
         return view('projects.edit', compact('project'));
     }
@@ -57,9 +59,9 @@ class ProjectsController extends Controller
 
     /**
      * @param UpdateProjectRequest $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return Redirector
      */
-    public function update(UpdateProjectRequest $request)
+    public function update(UpdateProjectRequest $request) : Redirector
     {
         return redirect($request->save()->path());
     }
