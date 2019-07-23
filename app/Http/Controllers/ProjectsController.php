@@ -44,7 +44,7 @@ class ProjectsController extends Controller
     /**
      * @return Redirector
      */
-    public function store() : Redirector
+    public function store()
     {
         $project = auth()->user()->projects()->create($this->validateRequest());
 
@@ -61,7 +61,7 @@ class ProjectsController extends Controller
      * @param UpdateProjectRequest $request
      * @return Redirector
      */
-    public function update(UpdateProjectRequest $request) : Redirector
+    public function update(UpdateProjectRequest $request) 
     {
         return redirect($request->save()->path());
     }

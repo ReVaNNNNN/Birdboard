@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Project;
 use Facades\Tests\Setup\ProjectFactory;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
