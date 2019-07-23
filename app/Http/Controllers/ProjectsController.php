@@ -5,28 +5,26 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Project;
 use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Routing\Redirector;
 use Illuminate\View\View;
 
 class ProjectsController extends Controller
 {
     /**
-     * @return View
+     * @return \Illuminate\Contracts\View\Factory|View
      */
-    public function index() : View
+    public function index()
     {
         $projects = auth()->user()->projects;
 
         return view('projects.index', compact('projects'));
     }
 
-
     /**
      * @param Project $project
-     * @return View
+     * @return \Illuminate\Contracts\View\Factory|View
      * @throws AuthorizationException
      */
-    public function show(Project $project) : View
+    public function show(Project $project)
     {
         $this->authorize('update', $project);
 
@@ -34,7 +32,7 @@ class ProjectsController extends Controller
     }
 
     /**
-     * @return View
+     * @return \Illuminate\Contracts\View\Factory|View
      */
     public function create()
     {
@@ -42,7 +40,7 @@ class ProjectsController extends Controller
     }
 
     /**
-     * @return Redirector
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store()
     {
@@ -51,7 +49,11 @@ class ProjectsController extends Controller
         return redirect($project->path());
     }
 
-    public function edit(Project $project) : View
+    /**
+     * @param Project $project
+     * @return \Illuminate\Contracts\View\Factory|View
+     */
+    public function edit(Project $project)
     {
         return view('projects.edit', compact('project'));
     }
@@ -59,9 +61,9 @@ class ProjectsController extends Controller
 
     /**
      * @param UpdateProjectRequest $request
-     * @return Redirector
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update(UpdateProjectRequest $request) 
+    public function update(UpdateProjectRequest $request)
     {
         return redirect($request->save()->path());
     }

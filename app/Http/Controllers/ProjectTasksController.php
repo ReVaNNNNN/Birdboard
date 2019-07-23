@@ -9,7 +9,7 @@ class ProjectTasksController extends Controller
 {
     /**
      * @param Project $project
-     * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function store(Project $project)
@@ -26,7 +26,7 @@ class ProjectTasksController extends Controller
     /**
      * @param Project $project
      * @param Task $task
-     * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function update(Project $project, Task $task)
