@@ -32,11 +32,17 @@ class UpdateProjectRequest extends FormRequest
         ];
     }
 
+    /**
+     * @return mixed
+     */
     public function project()
     {
         return Project::findOrFail($this->route('project'));
     }
 
+    /**
+     * @return mixed
+     */
     public function save()
     {
         return tap($this->project())->update($this->validated());
