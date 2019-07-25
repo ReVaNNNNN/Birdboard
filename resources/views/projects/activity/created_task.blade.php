@@ -1,2 +1,2 @@
-You completed a task
+You created a task
 
