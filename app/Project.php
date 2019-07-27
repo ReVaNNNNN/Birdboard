@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    use RecordActivity;
+    use RecordsActivity;
 
     protected $guarded = [];
+
+    protected static $recordableEvents = ['created', 'updated'];
 
     public function path()
     {
