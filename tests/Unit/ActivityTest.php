@@ -11,9 +11,11 @@ class ActivityTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function it_has_a_user()
+    public function test_it_has_a_user()
     {
-        $project = factory(Project::class);
+        // $this->signIn();
+
+        $project = factory(Project::class)->create();
 
         $this->assertInstanceOf(User::class, $project->activity->first()->user);
     }

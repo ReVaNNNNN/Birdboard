@@ -12,8 +12,16 @@ class Activity extends Model
         'changes' => 'array'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     */
     public function subject()
     {
         return $this->morphTo();
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
