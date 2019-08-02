@@ -47,6 +47,21 @@ class ManageProjectsTest extends TestCase
             ->assertSee($attributes['notes']);
     }
 
+    public function test_user_can_delete_project()
+    {
+        $project = ProjectFactory::create();
+
+        $this->actingAs($project->owner)
+            ->delete($project->path(), $attributes = [
+                'title' => 'Title changed.',
+                'description' => 'Description changed.',
+                'notes' => 'Notes has been changed.'
+            ])
+            ->assertRedirect($project->path());
+
+        $this->assertDatabaseMissing('projects', $project->only('id'));
+    }
+
     public function test_user_can_update_a_project()
     {
         $project = ProjectFactory::create();
