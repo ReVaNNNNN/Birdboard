@@ -13,7 +13,7 @@ trait RecordsActivity
      */
     public static function bootRecordsActivity()
     {
-        $recordableEvents = static::$recordableEvents ?? ['created', 'updated', 'deleted'];
+        $recordableEvents = static::$recordableEvents ?? ['created', 'updated'];
 
         foreach ($recordableEvents as $event) {
             static::$event(function ($model) use ($event) {

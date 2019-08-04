@@ -52,12 +52,8 @@ class ManageProjectsTest extends TestCase
         $project = ProjectFactory::create();
 
         $this->actingAs($project->owner)
-            ->delete($project->path(), $attributes = [
-                'title' => 'Title changed.',
-                'description' => 'Description changed.',
-                'notes' => 'Notes has been changed.'
-            ])
-            ->assertRedirect($project->path());
+            ->delete($project->path())
+            ->assertRedirect('/projects');
 
         $this->assertDatabaseMissing('projects', $project->only('id'));
     }
