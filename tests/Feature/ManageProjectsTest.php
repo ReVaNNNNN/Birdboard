@@ -47,6 +47,19 @@ class ManageProjectsTest extends TestCase
             ->assertSee($attributes['notes']);
     }
 
+    public function test_unauthorized_users_cannot_delete_project()
+    {
+        $project = ProjectFactory::create();
+
+        $this->delete($project->path())
+            ->assertRedirect('/login');
+
+        $this->sigIn();
+
+        $this->delete($project->path())
+            ->assertStatus(403);
+    }
+
     public function test_user_can_delete_project()
     {
         $project = ProjectFactory::create();
