@@ -4,10 +4,9 @@ namespace Tests\Unit;
 
 
 use App\User;
+use Facades\Tests\Setup\ProjectFactory;
 use Illuminate\Database\Eloquent\Collection;
-use phpDocumentor\Reflection\ProjectFactory;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class UserTest extends TestCase
@@ -25,13 +24,18 @@ class UserTest extends TestCase
     {
         $john = $this->sigIn();
 
-        $project = ProjectFactory::ownedBy($john)->create();
+        ProjectFactory::ownedBy($john)->create();
 
         $this->assertCount(1, $john->accessibleProjects());
 
         $sally = factory(User::class)->create();
+        $nick = factory(User::class)->create();
 
-        ProjectFactory::ownedBy($sally)->create()->invite($john);
+        $project = tap(ProjectFactory::ownedBy($sally)->create())->invite($nick);
+
+        $this->assertCount(1, $john->accessibleProjects());
+
+        $project->invite($john);
 
         $this->assertCount(2, $john->accessibleProjects());
     }
