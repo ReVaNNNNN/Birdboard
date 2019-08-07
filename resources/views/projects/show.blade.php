@@ -8,7 +8,12 @@
                     My projects
                 </a>/ {{ $project->title }}
             </p>
-            <a href="{{ route('projects-create') }}" class="button">New Project</a>
+            <div>
+                @foreach($project->members as $member)
+                    <img src="https://gravatar.com/avatar/{{ md5($member->email) }}?s=60" alt="{{ $member->name }}'s avatar">
+                @endforeach
+                <a href="{{ route('projects-create') }}" class="button">New Project</a>
+            </div>
         </div>
     </header>
 
