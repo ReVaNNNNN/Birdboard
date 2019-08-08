@@ -8,11 +8,20 @@
                     My projects
                 </a>/ {{ $project->title }}
             </p>
-            <div>
+            <div class="flex items-center">
                 @foreach($project->members as $member)
-                    <img src="https://gravatar.com/avatar/{{ md5($member->email) }}?s=60" alt="{{ $member->name }}'s avatar">
+                    <img
+                            src="={{  gravatar_url($member->email) }}"
+                            alt="{{ $member->name }}'s avatar"
+                            class="rounded-full w-8 mr-2">
                 @endforeach
-                <a href="{{ route('projects-create') }}" class="button">New Project</a>
+
+                <img
+                        src="{{ gravatar_url($project->owner->email) }}"
+                        alt="{{ $project->owner->name }}'s avatar"
+                        class="rounded-full w-8 mr-2">
+
+                <a href="{{ route('projects-create') }}" class="button ml-4">New Project</a>
             </div>
         </div>
     </header>
