@@ -15,6 +15,19 @@ class InvitationsTest extends TestCase
     {
         $project = ProjectFactory::create();
 
+        $userToInvite = factory(User::class)->create();
+
+        $this->actingAs($project->owner)->post($project->path() . '/invitations', [
+            'email' => $userToInvite->email
+        ]);
+
+        $this->assertTrue($project->members->contains($userToInvite));
+    }
+
+    public function test_invited_users_may_update_project_details()
+    {
+        $project = ProjectFactory::create();
+
         $project->invite($newUser = factory(User::class)->create());
 
         $this->sigIn($newUser);
