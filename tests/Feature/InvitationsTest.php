@@ -21,7 +21,7 @@ class InvitationsTest extends TestCase
             ->assertStatus(403);
     }
     
-    public function test_projec_owner_can_invite_a_user()
+    public function test_project_owner_can_invite_a_user()
     {
         $project = ProjectFactory::create();
 
