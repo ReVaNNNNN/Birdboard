@@ -16,9 +16,17 @@ class InvitationsTest extends TestCase
         $project = ProjectFactory::create();
         $notOwner = factory(User::class)->create();
 
-        $this->actingAs($notOwner)
-            ->post($project->path() . '/invitations')
-            ->assertStatus(403);
+        $assertInvitationForbidden = function () use ($project, $notOwner) {
+            $this->actingAs($notOwner)
+                ->post($project->path() . '/invitations')
+                ->assertStatus(403);
+        };
+
+        $assertInvitationForbidden();
+
+        $project->invite($notOwner);
+
+        $assertInvitationForbidden();
     }
     
     public function test_project_owner_can_invite_a_user()

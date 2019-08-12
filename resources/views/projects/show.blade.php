@@ -100,7 +100,7 @@
                         </button>
                     </form>
 
-                    @include('projects.partial.errors')
+                    @include('projects.partial.errors', ['bag' => 'invitations'])
                 </div>
             </div>
         </div>
