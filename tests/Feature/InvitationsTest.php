@@ -52,7 +52,7 @@ class InvitationsTest extends TestCase
             ])
             ->assertSessionHasErrors([
                 'email' => 'The user you are inviting must have a Birdboard account.'
-            ]);
+            ], null, 'invitation');
     }
 
     public function test_invited_users_may_update_project_details()
