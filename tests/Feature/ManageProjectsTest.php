@@ -54,10 +54,14 @@ class ManageProjectsTest extends TestCase
         $this->delete($project->path())
             ->assertRedirect('/login');
 
-        $this->sigIn();
+        $user = $this->sigIn();
 
         $this->delete($project->path())
             ->assertStatus(403);
+
+        $project->invite($user);
+
+        $this->actingAs($user)->delete($project->path())->assertStatus(403);
     }
 
     public function test_user_can_delete_project()
