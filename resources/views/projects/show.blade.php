@@ -30,7 +30,7 @@
         <div class="lg:flex -mx-3">
             <div  class="lg:w-3/4 px-5 mb-6">
                 <div class="mb-8">
-                    <h2 class="text-lg text-grey font-normal mb-3">Tasks</h2>
+                    <h2 class="text-lg text-default font-normal mb-3">Tasks</h2>
                     {{-- tasks --}}
                     @foreach($project->tasks as $task)
                         <div class="card mb-3">
@@ -42,7 +42,7 @@
                                     <input
                                             value="{{ $task->body }}"
                                             name="body"
-                                            class="w-full border-0 {{ $task->completed ? 'text-grey' : ''}}"
+                                            class="bg-card text-default w-full border-0 {{ $task->completed ? 'text-default' : ''}}"
                                     />
                                     <input
                                         type="checkbox"
@@ -59,13 +59,13 @@
                         <form action="{{ route('task-create', $project->id) }}" method="POST">
                             @csrf
 
-                            <input placeholder="Add a new task..." class="w-full border-0" name="body">
+                            <input placeholder="Add a new task..." class="bg-card text-default w-full border-0" name="body">
                         </form>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-lg text-grey font-normal mb-3">General Notes</h2>
+                    <h2 class="text-lg text-default font-normal mb-3">General Notes</h2>
 
                     <form method="POST" action=" {{route('projects-show', $project->id)}}">
                         @csrf
