@@ -38,13 +38,8 @@
                     </a>
                 </h1>
                 <div>
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="flex items-center ml-auto list-reset">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -56,9 +51,9 @@
                                 </li>
                             @endif
                         @else
-                            <div>
+                            <theme-switcher>
 
-                            </div>
+                            </theme-switcher>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
