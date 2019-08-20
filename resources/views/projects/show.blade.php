@@ -3,8 +3,8 @@
 @section('content')
     <header class="flex items-center mb-3 py-4">
         <div class="flex justify-between items-end w-full">
-            <p class="text-grey text-md font-normal">
-                <a href="{{ route('projects-index') }}" class="text-grey text-md font-normal no-underline">
+            <p class="text-default text-md font-normal">
+                <a href="{{ route('projects-index') }}" class="text-default text-md font-normal no-underline">
                     My projects
                 </a>/ {{ $project->title }}
             </p>
