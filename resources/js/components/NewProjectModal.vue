@@ -39,6 +39,14 @@
 
 <script>
     export default {
+        data() {
+            return {
+                tasks: [
+
+                ]
+            }
+        },
+
         methods: {
             addTask() {
 
