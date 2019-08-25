@@ -1,6 +1,6 @@
 <template>
     <modal name="new-project" classes="p-10 bg-card rounded-lg" height="auto">
-        <h1 class="font-normal mb-16 text-center text-2xl">Let's start something new</h1>
+        <h1 class="font-normal mb-16 text-center text-2xl">Create a new project</h1>
 
         <div class="flex">
             <div class="flex-1 mr-4">
@@ -14,6 +14,7 @@
                     <textarea type="text" id="description" class="border border-muted-light p-2 text-xs block w-full rounded" rows="7"></textarea>
                 </div>
             </div>
+
             <div class="flex-1 ml-4">
                 <div class="mb-4">
                     <label class="text-sm block mn-2">Need some Tasks ?</label>
