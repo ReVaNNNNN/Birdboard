@@ -18,7 +18,11 @@
             <div class="flex-1 ml-4">
                 <div class="mb-4">
                     <label class="text-sm block mn-2">Need some Tasks ?</label>
-                    <input type="text" placeholder="Task 2" class="border border-muted-light p-2 text-xs block w-full rounded">
+                    <input
+                            type="text"
+                           placeholder="Task 1"
+                           class="border border-muted-light p-2 text-xs block w-full rounded"
+                           v-for=""taks in tasks>
                 </div>
 
                 <button type="button" class="inline-flex items-center text-xs" @click="addTask()">
@@ -43,14 +47,14 @@
         data() {
             return {
                 tasks: [
-
+                    { value: ''}
                 ]
             }
         },
 
         methods: {
             addTask() {
-
+                this.tasks.push({ value: ''})
             }
         }
     }
