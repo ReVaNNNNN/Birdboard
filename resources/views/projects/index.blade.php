@@ -4,7 +4,7 @@
     <header class="flex items-center mb-3 py-4">
         <div class="flex justify-between items-end w-full">
             <h2 class="text-grey text-md font-normal">My projects</h2>
-            <a href="{{ route('projects-create') }}" class="button">New Project</a>
+            <a href="#" class="button" @click="$modal.show('new-project')">New Project</a>
         </div>
     </header>
 
@@ -19,6 +19,4 @@
     </main>
 
     <new-project-modal></new-project-modal>
-
-    <a href="" @click.prevent="$modal.show('new-project')">Show modal</a>
 @endsection
