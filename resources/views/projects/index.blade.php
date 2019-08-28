@@ -3,7 +3,7 @@
 @section('content')
     <header class="flex items-center mb-3 py-4">
         <div class="flex justify-between items-end w-full">
-            <h2 class="text-grey text-md font-normal">My projects</h2>
+            <h2 class="text-grey text-md font-normal">Projects: </h2>
             <a href="#" class="button" @click="$modal.show('new-project')">New Project</a>
         </div>
     </header>
@@ -14,7 +14,7 @@
                 @include('projects.card')
             </div>
         @empty
-            <div>No projects yet.</div>
+            <div>There is no projects yet.</div>
         @endforelse
     </main>
 
