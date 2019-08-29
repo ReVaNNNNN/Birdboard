@@ -43,7 +43,7 @@
                     </button>
 
                     <footer class="flex justify-end">
-                        <button class="button mr-4 bg-white" @click="$modal.hide('new-project')">Cancel</button>
+                        <button type="button" class="button mr-4 is-outlined" @click="$modal.hide('new-project')">Cancel</button>
                         <button class="button">Create project</button>
                     </footer>
                 </div>
