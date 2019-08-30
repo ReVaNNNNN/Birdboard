@@ -46,6 +46,11 @@ class ProjectsController extends Controller
     {
         $project = auth()->user()->projects()->create($this->validateRequest());
 
+        if ($tasks = request('tasks')) {
+            /** @var Project $project */
+            $project->addTasks($tasks);
+        }
+
         return redirect($project->path());
     }
 

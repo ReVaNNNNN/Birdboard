@@ -30,7 +30,7 @@
                                placeholder="Task 1"
                                class="border border-muted-light p-2 text-xs block w-full rounded"
                                v-for="task in form.tasks"
-                                v-model="task.value">
+                                v-model="task.body">
                         <span class="text-xs italic text-error" v-if="errors.description" v-text="errors.title[0]"></span>
                     </div>
 
@@ -60,7 +60,7 @@
                     title: '',
                     description: '',
                     tasks: [
-                        {value: ''}
+                        {body: ''}
                     ]
                 },
 

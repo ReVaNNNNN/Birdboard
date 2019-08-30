@@ -45,6 +45,15 @@ class Project extends Model
         return $this->tasks()->create(compact('body'));
     }
 
+    /**
+     * @param array $tasks
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function addTasks($tasks)
+    {
+        return $this->tasks()->createMany($tasks);
+    }
+
     public function activity()
     {
         return $this->hasMany(Activity::class)->latest();
