@@ -1,4 +1,4 @@
 # Birdboard
-It's application to manage tasks and projects. Application is building with TDD.
+Application to manage tasks and projects. Builded with TDD.
 
 ~ Inspired by Laracast.
